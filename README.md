@@ -1,1 +1,3 @@
-uitleg
+Dependencies
+
+pip install matplotlib
