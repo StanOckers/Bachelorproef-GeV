@@ -36,9 +36,9 @@ def plot_graph_with_peaks_and_std_dev(file_path):
 
     # Plot the graph
     plt.plot(x, y)
-    plt.xlabel('X-axis label')
-    plt.ylabel('Y-axis label')
-    plt.title('Graph Title')
+    plt.xlabel('Wavelength (nm)')
+    plt.ylabel('Photoncounts (cumulative)')
+    plt.title('Standard Deviations')
 
     # Calculate standard deviation of Y values for every 10 X values
     std_devs = calculate_std_dev(y)
@@ -50,7 +50,12 @@ def plot_graph_with_peaks_and_std_dev(file_path):
     peaks, _ = find_peaks(y, prominence=prominence)
 
     # Mark peaks on the graph
-    plt.plot([x[i] for i in peaks], [y[i] for i in peaks], "ro", label="peaks")
+    #plt.plot([x[i] for i in peaks], [y[i] for i in peaks], "ro", label="peaks")
+
+    mean_std_dev = calculate_mean_std_devs(std_devs)
+    for i in peaks:
+        if std_devs[int(i/10)] > mean_std_dev:
+            plt.plot(x[i], y[i], "ro", label="peaks")
 
     # Plot standard deviation as error bars
     x_values = [np.mean(x[i:i+10]) for i in range(0, len(x), 10)]
@@ -61,15 +66,9 @@ def plot_graph_with_peaks_and_std_dev(file_path):
     plt.show()
     return x, y
 
-file_path = 'S3.asc'  # Replace 'data.asc' with your file path
-
+file_path = 'Data\S1 signal 9 ll-c peak measurement background spot.asc'  # Replace 'data.asc' with your file path
 xdata, ydata =plot_graph_with_peaks_and_std_dev(file_path)
-
-
 std_dev=calculate_std_dev(ydata)
-
-
-
 calculate_mean_std_devs(std_dev)
 
 
