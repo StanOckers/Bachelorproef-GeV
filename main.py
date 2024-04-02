@@ -62,7 +62,7 @@ def plot_graph_with_peaks_and_std_dev(file_path):
     plt.errorbar(x_values, std_devs, fmt='none', yerr=std_devs, label='Standard Deviation')
 
     plt.grid(True)
-    plt.legend()
+    
     plt.show()
     return x, y
 
