@@ -50,12 +50,12 @@ def plot_graph_with_peaks(file_path):
     
     # Add grid and legend
     plt.grid(True)
-    plt.legend()
+    
     
     # Show plot
     plt.show()
 
 # Example usage:
-file_path = 'Data\S1 signal 8 lr-c caught peak.asc'  # Replace 'data.asc' with your file path
+file_path = 'Data\S1 signal 9 ll-c peak measurement background spot.asc'  # Replace 'data.asc' with your file path
 
 plot_graph_with_peaks(file_path)
