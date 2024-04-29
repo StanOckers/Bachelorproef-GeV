@@ -34,6 +34,14 @@ def plot_graph_with_peaks_and_std_dev(file_path):
                 x.append(float(data[0]))
                 y.append(float(data[1]))
 
+
+    for i in range(0, len(y), 1):
+        if i < i+5:     
+            if i > -5:
+                plt.plot(x[i], y[i], "ro", label="test peaks")
+
+
+
     # Plot the graph
     plt.plot(x, y)
     plt.xlabel('Wavelength (nm)')
@@ -49,9 +57,10 @@ def plot_graph_with_peaks_and_std_dev(file_path):
     # Find peaks with prominence
     peaks, _ = find_peaks(y, prominence=prominence)
 
-    # Mark peaks on the graph
-    #plt.plot([x[i] for i in peaks], [y[i] for i in peaks], "ro", label="peaks")
+    
 
+
+    # Mark peaks on the graph
     mean_std_dev = calculate_mean_std_devs(std_devs)
     for i in peaks:
         if std_devs[int(i/10)] > mean_std_dev:
@@ -66,7 +75,8 @@ def plot_graph_with_peaks_and_std_dev(file_path):
     plt.show()
     return x, y
 
-file_path = 'Data\S1 signal 9 ll-c peak measurement background spot.asc'  # Replace 'data.asc' with your file path
+file_path = 'Data\sample #8\S1 signal 9\\first 1 step 0,5mW.asc'  # Replace 'data.asc' with your file path
+
 xdata, ydata =plot_graph_with_peaks_and_std_dev(file_path)
 std_dev=calculate_std_dev(ydata)
 calculate_mean_std_devs(std_dev)
