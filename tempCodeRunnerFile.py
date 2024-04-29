@@ -1,2 +1,1 @@
-
-    plt.ylabel('Y-axis label')
+show
