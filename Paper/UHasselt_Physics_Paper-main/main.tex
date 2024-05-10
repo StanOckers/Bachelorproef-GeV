@@ -1,0 +1,61 @@
+\documentclass{uhphyspaper} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%       START DOCUMENT       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{lipsum} % For demo purposes, remove 
+\usepackage{listings} % Provides \lstinline{} for demo, remove
+
+% Titles
+\title{Title (bold)*}
+\runningtitle{*Running title: \textit{Short title ($\mathit{< 50}$ characters inc. spaces, italic, leave empty if not needed)}}
+\keywords{list at least five keywords, separated by commas}
+
+% Course information
+\bachyear{$\mathit{3^{e}}$}
+\course{Bachelorproef}
+\date{\today}
+
+% Authors, supervisors, principle investigator (PI, promotor)
+\author[1]{Student Name}
+\author[2]{Supervisor name}
+\author[3]{Second supervisor}
+\author[4$^{\dagger}$]{Principle Investigator} % Promotor: Dagger here signifies that the PI is the main correspondent
+
+% Author affiliations
+\affil[1]{UHasselt, Agoralaan, 3590 Diepenbeek, Belgium}
+\affil[2, 3]{Specify Group}
+\affil[1,4$^{\dagger}$]{UHasselt, ResearchGroup, Agoralaan, 3590 Diepenbeek, Belgium} % Dagger here signifies that the PI is the main correspondent
+
+% PI contact info, do not remove
+\pitel{+32 (11) 11 11 11}
+\pimail{PImail@uhasselt.be}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%       START DOCUMENT       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\maketitle\thispagestyle{fancy} % pagestyle ensures header is present
+
+% Each section is placed in a separate file to better organise your text
+% You can find these files in the Sections folder
+\input{Sections/0-ABSTRACT}
+\newline
+\rule[1.5ex]{\linewidth}{0.4pt}
+
+\input{Sections/1-INTRODUCTION}
+\input{Sections/2-THEORY} % May be removed if unnecessary
+\input{Sections/3-EXPERIMENTAL} % May be removed if unnecessary
+\input{Sections/4-RESULTS}
+\input{Sections/5-DISCUSSION}
+\input{Sections/6-CONCLUSIONS}
+
+% Additional sections for acknowledgments
+\rule{\linewidth}{0.4pt}
+\input{Sections/7-ACKNOWLEDGEMENTS}
+
+% The bibliography is added at the end of the paper in a single column
+\vspace{0.5cm}
+\printbibliography[title={REFERENCES}]
+
+\end{document}

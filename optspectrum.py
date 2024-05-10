@@ -6,7 +6,7 @@ import csv
 #1
 
 
-path = 'Data\\sample #9\\dark spot 2.asc'
+path = 'Data\sample #9\Bright spot\signal 8.asc'
 fig = plt.figure(figsize = [16, 6])
 
 with open(path , 'r') as fp:
@@ -31,7 +31,7 @@ plt.yticks(fontsize = 16)
 
 #2
 
-path = 'Data\\sample #9\\dark spot bg.asc'
+path = 'Data\sample #9\Bright spot\signal 9.asc'
 fig = plt.figure(figsize = [16, 6])
 
 with open(path +  "", 'r') as fp:

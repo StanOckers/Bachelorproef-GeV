@@ -110,20 +110,19 @@ def plot_graph_rescale(file_path_3, file_path_4, file_path_5, file_path_6, file_
 
 
 #single step measurements
-file_path_1 = 'Data\sample #9\Bright spot\signal 4 1 step.asc'
-file_path_2 = 'Data\sample #9\Bright spot\signal 4 1 step unstable peak caught at 623.asc'
-
-#cumulative measurements 1mw
-file_path_3 = 'Data\sample #9\Bright spot\signal 4 50 steps second acq 1mW.asc'
+file_path_1 = 'Data\sample #9\Bright spot\signal 4 1 step peak lost-lower 0,9mW.asc'
+file_path_2 = 'Data\sample #9\Bright spot\signal 4 1 step peak caught 0,9mW.asc'
 
 #cumulative measurements of 50 steps
-file_path_4 = 'Data\sample #9\Bright spot\signal 4 50 steps third acq 1mW.asc'
-file_path_5 = 'Data\sample #9\Bright spot\signal 4 50 steps fourth acq 1mW.asc'
-file_path_6 = 'Data\sample #9\Bright spot\signal 4 50 steps fifth acq 1mW.asc'
-file_path_7 = 'Data\sample #9\Bright spot\signal 4 50 steps sixth acq 1mW.asc'
+
+file_path_3 = 'Data\sample #9\Bright spot\signal 4 50 steps second acq 1,1mW.asc'
+file_path_4 = 'Data\sample #9\Bright spot\signal 4 50 steps third acq 1,1mW.asc'
+file_path_5 = 'Data\sample #9\Bright spot\signal 4 50 steps fourth acq 1,1mW.asc'
+file_path_6 = 'Data\sample #9\Bright spot\signal 4 50 steps fifth acq 1,1mW.asc'
+file_path_7 = 'Data\sample #9\Bright spot\signal 4 50 steps sixth acq 1,1mW.asc'
 
 #cumulative measurements of 400 steps / 8
-file_path_8 = 'Data\sample #9\Bright spot\signal 4 400 steps after 10 minutes.asc'
+file_path_8 = 'Data\sample #9\Bright spot\signal 4 400 steps after 10 minutes of stopwatch 1,1mW.asc'
 
 
 xdata, ydata =plot_graph_overlay(file_path_1, file_path_2)
