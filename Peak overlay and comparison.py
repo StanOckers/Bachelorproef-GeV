@@ -30,7 +30,7 @@ def plot_graph_overlay(file_path_1, file_path_2):
     plt.plot(x, z, color='green', alpha= 1, label='1mW')
     plt.xlabel('Wavelength (nm)')
     plt.ylabel('Photoncounts')
-    plt.title('single step')
+    plt.title('Sample #7')
     plt.grid(True)
     plt.legend()
     #plt.ylim(400, 3000)                                     # Set the y-axis limit for left plot
@@ -38,7 +38,7 @@ def plot_graph_overlay(file_path_1, file_path_2):
     return x, y
 
 
-def plot_graph_rescale(file_path_3, file_path_4, file_path_5, file_path_6, file_path_7, file_path_8):
+#def plot_graph_rescale(file_path_3, file_path_4, file_path_5, file_path_6, file_path_7, file_path_8):
     x = []
     y1 = []
     y2 = []
@@ -110,23 +110,23 @@ def plot_graph_rescale(file_path_3, file_path_4, file_path_5, file_path_6, file_
 
 
 #single step measurements
-file_path_1 = 'Data\sample #9\Bright spot\signal 4 1 step peak lost-lower 0,9mW.asc'
-file_path_2 = 'Data\sample #9\Bright spot\signal 4 1 step peak caught 0,9mW.asc'
+file_path_1 = 'Data\\4\sample 7\S1 signal 1 lr-c.asc'
+file_path_2 = 'Data\\4\sample 7\S1 signal 2 top middle.asc'
 
 #cumulative measurements of 50 steps
 
-file_path_3 = 'Data\sample #9\Bright spot\signal 4 50 steps second acq 1,1mW.asc'
-file_path_4 = 'Data\sample #9\Bright spot\signal 4 50 steps third acq 1,1mW.asc'
-file_path_5 = 'Data\sample #9\Bright spot\signal 4 50 steps fourth acq 1,1mW.asc'
-file_path_6 = 'Data\sample #9\Bright spot\signal 4 50 steps fifth acq 1,1mW.asc'
-file_path_7 = 'Data\sample #9\Bright spot\signal 4 50 steps sixth acq 1,1mW.asc'
+#file_path_3 = 'Data\sample #9\Bright spot\signal 4 50 steps second acq 1,1mW.asc'
+#file_path_4 = 'Data\sample #9\Bright spot\signal 4 50 steps third acq 1,1mW.asc'
+#file_path_5 = 'Data\sample #9\Bright spot\signal 4 50 steps fourth acq 1,1mW.asc'
+#file_path_6 = 'Data\sample #9\Bright spot\signal 4 50 steps fifth acq 1,1mW.asc'
+#file_path_7 = 'Data\sample #9\Bright spot\signal 4 50 steps sixth acq 1,1mW.asc'
 
 #cumulative measurements of 400 steps / 8
-file_path_8 = 'Data\sample #9\Bright spot\signal 4 400 steps after 10 minutes of stopwatch 1,1mW.asc'
+#file_path_8 = 'Data\sample #9\Bright spot\signal 4 400 steps after 10 minutes of stopwatch 1,1mW.asc'
 
 
 xdata, ydata =plot_graph_overlay(file_path_1, file_path_2)
-xdata, ydata =plot_graph_rescale(file_path_3, file_path_4, file_path_5, file_path_6, file_path_7, file_path_8)
+#xdata, ydata =plot_graph_rescale(file_path_3, file_path_4, file_path_5, file_path_6, file_path_7, file_path_8)
 plt.show()
 
 
