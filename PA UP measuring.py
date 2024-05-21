@@ -73,7 +73,7 @@ def plot_graph_with_peaks_and_std_dev(file_path, file_path_no_peak):
     plt.plot(x, y)
     plt.xlabel('Wavelength (nm)')
     plt.ylabel('Photoncounts')
-    plt.title('Peak detection by method of Standard Deviations')
+    plt.title('Unstable peak height')
 
     # Calculate standard deviation of Y values for every 10 X values
     std_devs = calculate_std_dev(y)
@@ -91,15 +91,16 @@ def plot_graph_with_peaks_and_std_dev(file_path, file_path_no_peak):
     # Mark peaks on the graph
     mean_std_dev = calculate_mean_std_devs(std_devs)
     for i in peaks:
-        if std_devs[int(i/10)] > mean_std_dev:
+        if y[i] > get_y_in_data(file_path_no_peak, x[i]) + 200:
             plt.plot(x[i], y[i], "ro", label="peaks")
-            plt.text(x[i], y[i], str(x[i]))
+            plt.text(x[i], y[i],  str(y[i] - get_y_in_data(file_path_no_peak, x[i])))
             plt.plot([x[i], x[i]], [y[i], get_y_in_data(file_path_no_peak, x[i])], linestyle = 'dotted')
 
     # Plot standard deviation as error bars
     x_values = [np.mean(x[i:i+10]) for i in range(0, len(x), 10)]
-    plt.errorbar(x_values, std_devs, fmt='none', yerr=std_devs, label='Peak detection by method of Standard Deviation', elinewidth=2)
-    plt.errorbar(x_values, std_devs_no_peak, fmt='none', yerr=std_devs_no_peak, label='Standard Deviation', elinewidth=2, color='gray')
+    plt.errorbar(x_values, std_devs, fmt='none', yerr=std_devs, label='Standard Deviation', elinewidth=2)
+    plt.errorbar(x_values, std_devs_no_peak, fmt='none', yerr=std_devs_no_peak, label='Standard Deviation', elinewidth=2,color='gray')
+
     plt.grid(True)
     
     plt.show()

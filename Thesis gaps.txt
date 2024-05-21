@@ -1,0 +1,20 @@
+Thesis gaps
+
+Theory
+	More info on ZPL’s?
+	More info on Single Photon Sources?
+	Negative charge of GeV (GeV(-))?
+
+Experiment
+	Use of λ/2 in setup?
+	Sample description of the 3 sample types
+
+Results
+ 
+
+
+
+To do:
+	Measure sample 12 with singles (peak caught, lost) and 4 50step acq. for 1mw to 0,5 mW
+	Measure time span of 50 step acq. 
+

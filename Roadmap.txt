@@ -1,0 +1,20 @@
+experimental
+	setup
+	code
+	   plotting
+	samples	
+	
+Results
+	Unstable peak lifetime VS laser power
+	Height VS laser power
+	
+	Jump freq and behaviour vs laser power Ge on Si
+		Jump range, bright vs dark
+
+Discussion
+	Trend in avg lifetimes does not match between samples, also ratio amount differs. 
+	
+	Height of 1 step UP does not decrease linearly, thus implying different height appearances for UP
+
+	jump freq: Appearance cycles are not periodic (fig 9A), nor the dark/bright ratio.
+		average jump freq does go down with decreasing laser power!
